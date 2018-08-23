@@ -22,8 +22,8 @@
             android:id="@+id/nameOfPlace_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="name"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            tools:text="name" />
 
     </LinearLayout>
 </LinearLayout>

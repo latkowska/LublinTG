@@ -6,7 +6,7 @@
     <string name="nav_header_subtitle">www.lublin.eu</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="pearl">Lublin pear of the east...</string>
+    <string name="pearl">Lublin pearl of the east...</string>
 
     <!-- Navigation Drawer menu labels -->
     <string name="nav_worth_to_visit">Worth to visit</string>
@@ -22,11 +22,33 @@
         <item>Culture</item>
         <item>Attractions</item>
         <item>coffee and restaurants</item>
-
     </string-array>
 
-    <string name="OTActiv">Old Town</string>
+    <!--Attraction places names -->
+    <string name="aquL">Aqua Lublin - swimmingpool complex</string>
+    <string name="stadium">Sport stadium - Arena Lublin</string>
+    <string name="speedway">Speedway stadium Motor Lublin</string>
 
-    <string name="OTAbout">Having entered the Old Town through the Cracow Gate (Brama Krakowska), stop and turn right, next to the first house on the corner of Bramowa and Jezuicka Streets. The Lublin Tourist and Cultural Information Centre is a place where you can get maps, guides and promotional brochures regarding the City of Lublin and the Lublin region, as well as purchase exciting souvenirs. Employees of the Centre will be happy to inform you about current events and tourist attractions, municipal and regional transport, and they will help you find suitable accommodation, as well as suggest a place for a good dinner. You can rent a bike here and leave your luggage. You can also use a computer with internet access.</string>
+    <!--Coffee and restaurants  places names -->
+    <string name="paw">Devil\'s paw Restaurant</string>
+    <string name="tryb">Trybunalska City Pub</string>
+    <string name="pub">Irish Pub</string>
 
-   </resources>
+    <!--Culture  places names -->
+    <string name="jazz">Lublin Jazz Festival</string>
+    <string name="carnival">Carnival of the magicians</string>
+    <string name="theatre">The Old Theater</string>
+
+    <!--Museums  places names -->
+    <string name="majdanek">The State Museum at Majdanek</string>
+    <string name="village">The Open Air Village Museum</string>
+    <string name="cmus">The Lublin Museum</string>
+
+    <!--Worth to visit  places names -->
+    <string name="oldt">Old Town</string>
+    <string name="castle">The Castle</string>
+    <string name="tower">Trinitarian tower</string>
+
+    <!--Toolbar title-->
+    <string name="ToolbarTitle">Lublin Tour Guide</string>
+</resources>

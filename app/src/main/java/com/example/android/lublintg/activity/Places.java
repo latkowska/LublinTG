@@ -3,34 +3,34 @@ package com.example.android.lublintg.activity;
 public class Places {
 
     //Name of the place
-    private String tNameOfPlace;
-    private int tImageResourceID;
+    private int mNameOfPlace;
+    private int mImageResourceID;
 
     /**
-     * Creating new object with one parameter in constructor.
+     * Creating new object with one parameter in constructor, if we want to use list item without pictures.
      */
 
-    public Places(String nameOfPlace) {
-        tNameOfPlace = nameOfPlace;
+    public Places(int nameOfPlace) {
+        mNameOfPlace = nameOfPlace;
     }
 
     /**
      * Create new object with two parameters in constructor.
      */
 
-    public Places(String nameOfPlace, int imageResourceID) {
-        tNameOfPlace = nameOfPlace;
-        tImageResourceID = imageResourceID;
+    public Places(int nameOfPlace, int imageResourceID) {
+        mNameOfPlace = nameOfPlace;
+        mImageResourceID = imageResourceID;
     }
 
     //Get name of the place
-    public String gettNameOfPlace() {
-        return tNameOfPlace;
+    public int gettNameOfPlace() {
+        return mNameOfPlace;
     }
 
     //Get Image resource ID
     public int gettImageResourceID() {
-        return tImageResourceID;
+        return mImageResourceID;
     }
 
 }

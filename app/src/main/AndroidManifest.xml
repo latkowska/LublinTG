@@ -18,68 +18,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity.Worth_to_visitActivity"
-            android:label="@string/nav_worth_to_visit"
-            android:parentActivityName=".activity.MainActivity">
+        </activity><![CDATA[
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.lublintg.activity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".activity.MuseumsActivity"
-            android:label="@string/nav_museums"
-            android:parentActivityName=".activity.MainActivity">
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.lublintg.activity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".activity.CultureActivity"
-            android:label="@string/nav_culture"
-            android:parentActivityName=".activity.MainActivity">
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.lublintg.activity.MainActivity" />
-        </activity>
         />
-        <activity
-            android:name=".activity.AttractionsActivity"
-            android:label="@string/nav_culture"
-            android:parentActivityName=".activity.MainActivity">
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.lublintg.activity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".activity.CoffeeActivity"
-            android:label="@string/nav_coffee_and_restaurants"
-            android:parentActivityName=".activity.MainActivity">
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.lublintg.activity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".activity.OldTownActivity"
-            android:label="@string/OTActiv"
-            android:parentActivityName=".activity.MainActivity">
 
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.lublintg.activity.MainActivity" />
-        </activity>
+
+    ]]>
     </application>
 
 </manifest>

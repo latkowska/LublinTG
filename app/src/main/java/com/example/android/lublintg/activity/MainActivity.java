@@ -12,6 +12,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.example.android.lublintg.R;
+import com.example.android.lublintg.fragment.AttractionsFragment;
+import com.example.android.lublintg.fragment.CoffeeFragment;
+import com.example.android.lublintg.fragment.CultureFragment;
+import com.example.android.lublintg.fragment.MuseumsFragment;
+import com.example.android.lublintg.fragment.WorthToVisitFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -20,10 +25,9 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.ToolbarTitle);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -45,67 +49,47 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
+        //calling the method displayselectedscreen and passing the id of selected menu
+        displaySelectedScreen(item.getItemId());
+        return true;
+    }
 
-        if (id == R.id.nav_worth_to_visit) {
+    private void displaySelectedScreen(int itemId) {
+        //creating fragment object
+        Fragment fragment = null;
 
-            Fragment newFragment = new Fragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        //initializing the fragment object which is selected
+        switch (itemId) {
+            case R.id.nav_worth_to_visit:
+                fragment = new WorthToVisitFragment();
+                break;
+            case R.id.nav_museums:
+                fragment = new MuseumsFragment();
+                break;
+            case R.id.nav_culture:
+                fragment = new CultureFragment();
+                break;
+            case R.id.nav_attraction:
+                fragment = new AttractionsFragment();
+                break;
+            case R.id.nav_coffee_and_restaurants:
+                fragment = new CoffeeFragment();
+                break;
+        }
 
-            transaction.replace(R.id.fragment_container, newFragment);
-            transaction.addToBackStack(null);
-
-            transaction.commit();
-
-        } else if (id == R.id.nav_museums) {
-
-            Fragment newFragment = new Fragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-            transaction.replace(R.id.fragment_container, newFragment);
-            transaction.addToBackStack(null);
-
-            transaction.commit();
-
-        } else if (id == R.id.nav_culture) {
-
-            Fragment newFragment = new Fragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-            transaction.replace(R.id.fragment_container, newFragment);
-            transaction.addToBackStack(null);
-
-            transaction.commit();
-
-        } else if (id == R.id.nav_attraction) {
-
-            Fragment newFragment = new Fragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-            transaction.replace(R.id.fragment_container, newFragment);
-            transaction.addToBackStack(null);
-
-            transaction.commit();
-
-        } else if (id == R.id.nav_coffee_and_restaurants) {
-
-            Fragment newFragment = new Fragment();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-            transaction.replace(R.id.fragment_container, newFragment);
-            transaction.addToBackStack(null);
-
-            transaction.commit();
-
+        //replacing the fragment
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 }
+
+

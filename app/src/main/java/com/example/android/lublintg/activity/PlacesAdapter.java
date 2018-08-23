@@ -20,22 +20,21 @@ public class PlacesAdapter extends ArrayAdapter<Places> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Check if an existing view is being reused, otherwise inflate the view
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item_wtv, parent, false);
         }
 
-        // Get the {@link Word} object located at this position in the list
+        // Get the position of the object located at this
         Places currentPlace = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID miwok_text_view.
+        // Find the TextView in the list_item_wtv.xml layout with the propoer ID
         TextView nameOfPlaceTextView = (TextView) listItemView.findViewById(R.id.nameOfPlace_TextView);
 
         nameOfPlaceTextView.setText(currentPlace.gettNameOfPlace());
 
-        // Find the ImageView in the list_item.xml layout with the ID image.
+        // Find the ImageView in the list_item_wtv.xml layout with the ID image.
         ImageView pictureImageView = (ImageView) listItemView.findViewById(R.id.picture_ImageView);
 
         pictureImageView.setImageResource(currentPlace.gettImageResourceID());
